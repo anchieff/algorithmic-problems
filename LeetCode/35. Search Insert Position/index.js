@@ -10,7 +10,7 @@ const searchInsert = function (nums, target) {
 
   while (right - left > 1) {
     let mid = Math.floor((right + left) / 2);
-    if (nums[mid] === target) return mid; // возвращаем позицию, если нашли элемент
+    if (nums[mid] === target) return mid;
 
     if (nums[mid] > target) {
       right = mid;

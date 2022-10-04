@@ -1,16 +1,16 @@
 /**
  * @param {number[]} nums
+ * @param {number} val
  * @return {number}
  */
-const removeDuplicates = (nums) => {
-  let k = 1;
+const removeElement = (nums, val) => {
+  let k = 0;
 
   for (let i = 0; i < nums.length; i++) {
-    if (nums[k - 1] !== nums[i]) {
+    if (nums[i] !== val) {
       nums[k] = nums[i];
       k++;
     }
   }
-  nums.length = k;
   return k;
 };
